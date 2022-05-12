@@ -51,32 +51,6 @@ public class MainPage {
         return this;
     }
 
-    public MainPage checkButtonDelegatePool(WebDriver driver){
-        step("Check is button displayed",()->{
-            delegatePoolBtn.isDisplayed();
-        });
-
-        step("Check is button enabled",()->{
-            delegatePoolBtn.isEnabled();
-        });
-
-        step("Check is button have correct text",()->{
-            Assertions.assertEquals(delegatePoolBtn.getText(),"Delegate to the Pool");
-        });
-
-        step("Click on button",()->{
-            delegatePoolBtn.click();
-        });
-
-        step("Check opened new page in new tab",()->{
-            WebDriver tab = driver;
-            tab.getWindowHandle();
-            Assertions.assertEquals(tab.getCurrentUrl(),"https://eversol.one/");
-        });
-
-        return this;
-    }
-
     public MainPage checkSectiontotalStake(){
         step("Check dispalyed title",()->{
             titleTotalStake.isDisplayed();
