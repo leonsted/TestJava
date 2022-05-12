@@ -67,7 +67,7 @@ public class DriverHelper {
         addListener("AllureSelenide", new AllureSelenide());
 
 
-        if(isWallet) {
+        if(isWeb) {
             Configuration.baseUrl = TestData.getWebUrl();
         }
         Configuration.browser = getDriverConfig().webBrowser();
@@ -75,12 +75,6 @@ public class DriverHelper {
         Configuration.browserSize = getDriverConfig().webBrowserSize();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        if (isRemoteWebDriver()) {
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-            Configuration.remote = getWebRemoteDriver();
-        }
 
         Configuration.browserCapabilities = capabilities;
     }
