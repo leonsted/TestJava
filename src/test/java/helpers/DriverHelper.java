@@ -47,14 +47,6 @@ public class DriverHelper {
         return !getVideoUrl().equals("");
     }
 
-    public static String getWebMobile(){
-        return getDriverConfig().webBrowserMobileView();
-    }
-
-    public static boolean isWebMobile(){
-        return !getWebMobile().equals("");
-    }
-
     public static String getSessionId(){
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid","");
     }
@@ -67,9 +59,7 @@ public class DriverHelper {
         addListener("AllureSelenide", new AllureSelenide());
 
 
-        if(isWeb) {
-            Configuration.baseUrl = TestData.getWebUrl();
-        }
+        Configuration.baseUrl = TestData.getWebUrl();
         Configuration.browser = getDriverConfig().webBrowser();
         Configuration.browserVersion = getDriverConfig().webBrowserVersion();
         Configuration.browserSize = getDriverConfig().webBrowserSize();

@@ -1,12 +1,10 @@
 package pages;
 
 import Data.TestData;
-import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;

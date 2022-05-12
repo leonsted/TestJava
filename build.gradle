@@ -70,13 +70,7 @@ tasks.withType(Test) {
 
 task ui(type: Test) {
     useJUnitPlatform {
-        includeTags 'wallet'
-    }
-}
-
-task adminUi(type: Test) {
-    useJUnitPlatform {
-        includeTags 'admin'
+        includeTags 'ui'
     }
 }
 
